@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Issue | Curated Magazine Experience</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation / Header -->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="brand-logo">Dear Issue</h1>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h2 class="hero-tagline">Your Stories, beautifully curated in print.</h2>
+            <p class="hero-subtext">Experience the luxury of a personalized magazine designed just for you.</p>
+            <a href="#order-section" class="btn btn-primary">Order Your Magazine</a>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order-section" class="order-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Design Your Issue</h2>
+                <p class="section-subtitle">Tell us about your vision, and we’ll bring it to life.</p>
+            </div>
+
+            <form id="orderForm" class="order-form">
+
+                <!-- Magazine Details Group -->
+                <div class="form-group-wrapper">
+                    <h3 class="form-group-title">Magazine Details</h3>
+
+                    <div class="form-grid">
+                        <div class="form-control">
+                            <label for="magazineType">Magazine Type</label>
+                            <select id="magazineType" name="magazineType" required>
+                                <option value="" disabled selected>Select a style...</option>
+                                <option value="minimalist">The Minimalist (Clean & Airy)</option>
+                                <option value="editorial">The Editorial (Bold & Fashion)</option>
+                                <option value="vintage">The Vintage (Classic & Warm)</option>
+                                <option value="custom">Custom Avant-Garde</option>
+                            </select>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="pageCount">Number of Pages</label>
+                            <input type="number" id="pageCount" name="pageCount" min="10" max="200" value="20" required>
+                            <small>Minimum 10 pages</small>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="timeline">Estimated Timeline (Days)</label>
+                            <input type="number" id="timeline" name="timeline" min="3" value="7" required>
+                            <small>Minimum 3 days required for production</small>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="completionDate">Estimated Completion Date</label>
+                            <input type="text" id="completionDate" name="completionDate" readonly>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Details Group -->
+                <div class="form-group-wrapper">
+                    <h3 class="form-group-title">Your Details</h3>
+
+                    <div class="form-grid">
+                        <div class="form-control">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" required>
+                        </div>
+
+                        <div class="form-control">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+1 (555) 000-0000"
+                                required>
+                        </div>
+
+                        <div class="form-control full-width">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Request -->
+                <div class="form-group-wrapper">
+                    <h3 class="form-group-title">Custom Vision</h3>
+                    <div class="form-control full-width">
+                        <label for="description">Describe your magazine idea</label>
+                        <textarea id="description" name="description" rows="5"
+                            placeholder="I want a magazine that feels like a summer in Italy..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Order Summary & Submit -->
+                <div class="form-footer">
+                    <div id="formMessage" class="form-message"></div>
+                    <button type="submit" class="btn btn-submit">Place Order Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Dear Issue. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
